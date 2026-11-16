@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSF Poultry Central Sdn Bhd | Premium Cold-Chain & Processed Chicken</title>
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --accent: #22c55e;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui, -apple-system, sans-serif; }
+        body { color: var(--dark); background: var(--light); line-height: 1.6; overflow-x: hidden; }
+        
+        header { background: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .logo { font-size: 1.15rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .nav-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        .hero { background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=1600&q=80') center/cover; color: white; padding: 5rem 1.5rem; text-align: center; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; font-weight: 800; line-height: 1.2; }
+        .hero p { font-size: clamp(1rem, 2vw, 1.25rem); max-width: 700px; margin: 0 auto 2rem; opacity: 0.9; }
+        .btn { display: inline-block; background: var(--accent); color: white; padding: 0.75rem 1.75rem; border-radius: 0.375rem; text-decoration: none; font-weight: 600; transition: background 0.2s; }
+        .btn:hover { background: #16a34a; }
+
+        .section { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; }
+        .section-title { text-align: center; font-size: clamp(1.75rem, 3vw, 2.25rem); margin-bottom: 2.5rem; font-weight: 700; }
+        
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .card { background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); }
+        .card h3 { margin-bottom: 0.75rem; font-size: 1.25rem; }
+
+        .branches { background: #e2e8f0; }
+        .branch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; }
+        .branch-card { background: white; padding: 1.25rem; border-radius: 0.5rem; text-align: center; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+
+        .contact-box { max-width: 600px; margin: 0 auto; background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .contact-info { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem; text-align: center; }
+        .contact-info a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .contact-info a:hover { text-decoration: underline; }
+
+        footer { background: var(--dark); color: white; text-align: center; padding: 2.5rem 1.5rem; margin-top: 3rem; font-size: 0.9rem; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; align-items: center; text-align: center; }
+            .nav-links { justify-content: center; gap: 1rem; }
+            .hero { padding: 4rem 1rem; }
+            .section { padding: 3rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">OSF Poultry Central Sdn Bhd</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#branches">Branches</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>High-Grade Frozen Chicken & Cold-Chain Logistics</h1>
+        <p>Supplying premium, hygienic, Halal-certified poultry to wholesale partners, supermarkets, and food services across Malaysia.</p>
+        <a href="#contact" class="btn">Request Wholesale Quote</a>
+    </section>
+
+    <section id="about" class="section">
+        <h2 class="section-title">State-of-the-Art Processing Standards</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Strict Hygiene Control</h3>
+                <p>Our processing and cold-chain facilities maintain strict temperature parameters to lock in maximum freshness and safety.</p>
+            </div>
+            <div class="card">
+                <h3>Halal Compliance</h3>
+                <p>Fully compliant processing methods supervised under strict quality and religious regulatory standards.</p>
+            </div>
+            <div class="card">
+                <h3>Reliable Bulk Supply</h3>
+                <p>Equipped with advanced storage logistics to ensure steady, uninterrupted fulfillment for enterprise clients.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="section" style="background: #ffffff;">
+        <h2 class="section-title">Our Premium Product Lines</h2>
+        <div class="grid-3">
+            <div class="card" style="border-top-color: var(--accent);">
+                <h3>Whole Frozen Chicken</h3>
+                <p>Cleaned, graded, and flash-frozen whole birds packaged securely for wholesale distribution and retail supermarkets.</p>
+            </div>
+            <div class="card" style="border-top-color: var(--accent);">
+                <h3>Cut Parts & Portions</h3>
+                <p>Custom-cut segments including chicken breasts, thighs, drums, and wings tailored to commercial kitchen and restaurant requirements.</p>
+            </div>
+            <div class="card" style="border-top-color: var(--accent);">
+                <h3>Cold-Chain Distribution</h3>
+                <p>Temperature-controlled transport fleets ensuring product integrity from our processing facilities straight to your warehouse doors.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="branches" class="section branches">
+        <h2 class="section-title">Our Strategic Network</h2>
+        <div class="branch-grid">
+            <div class="branch-card">HQ (Main Operations)<br><span style="font-size:0.85rem; font-weight:normal; color:#64748b;">Johor Bahru</span></div>
+            <div class="branch-card">Kuala Lumpur Branch<br><span style="font-size:0.85rem; font-weight:normal; color:#64748b;">Central Region</span></div>
+            <div class="branch-card">Penang Branch<br><span style="font-size:0.85rem; font-weight:normal; color:#64748b;">Northern Region</span></div>
+            <div class="branch-card">Johor Branch<br><span style="font-size:0.85rem; font-weight:normal; color:#64748b;">Southern Hub</span></div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Get in Touch with Sales</h2>
+        <div class="contact-box">
+            <p style="margin-bottom: 1.25rem; text-align: center; color: #475569;">For commercial pricing, bulk orders, or partnership inquiries, reach out directly to our management and sales team.</p>
+            <div class="contact-info">
+                <p><strong>Direct Call / Mobile:</strong> <a href="tel:+60127641618">+60 12-764 1618</a></p>
+                <p><strong>WhatsApp Sales:</strong> <a href="
