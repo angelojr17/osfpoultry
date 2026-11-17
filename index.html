@@ -120,4 +120,81 @@
             </div>
             <div class="card" style="border-top-color: var(--accent);">
                 <h3>Cold-Chain Distribution</h3>
-                <p>Temperature-controlled transport
+                <p>Temperature-controlled transport fleets ensuring product integrity from our processing facilities straight to your warehouse doors.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="branches" class="section branches">
+        <h2 class="section-title">Our Strategic Network</h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: #475569;">Click on any branch below to view its regional location details, operations overview, and contact info:</p>
+        
+        <div class="branch-grid">
+            <div class="branch-card active" onclick="showBranch('kl')">Kuala Lumpur HQ<br><span style="font-size:0.85rem; font-weight:normal; color:#64748b;">Central HQ & Hub</span></div>
+            <div class="branch-card" onclick="showBranch('penang')">Penang Branch<br><span style="font-size:0.85rem; font-weight:normal; color:#64748b;">Northern Region</span></div>
+            <div class="branch-card" onclick="showBranch('johor')">Johor Branch<br><span style="font-size:0.85rem; font-weight:normal; color:#64748b;">Southern Hub</span></div>
+        </div>
+
+        <div class="branch-details-container">
+            <!-- KL HQ Pane -->
+            <div id="pane-kl" class="branch-detail-pane active">
+                <h3>Kuala Lumpur (Headquarters)</h3>
+                <p><strong>Location & Hub:</strong> Kuala Lumpur (Main Corporate Headquarters & Central Region Hub)</p>
+                <p><strong>Overview:</strong> Manages primary corporate governance, nationwide supply chain logistics coordination, central processing quality control, and key enterprise accounts.</p>
+                <p><strong>Direct Contact:</strong> <a href="tel:+60178389777">+60 17-838 9777</a> | Email: <a href="mailto:hq@osfpoultry.com">hq@osfpoultry.com</a></p>
+            </div>
+
+            <!-- Penang Pane -->
+            <div id="pane-penang" class="branch-detail-pane">
+                <h3>Penang Branch - Northern Region</h3>
+                <p><strong>Location & Hub:</strong> Prai / Penang Industrial Cold-Chain Terminal</p>
+                <p><strong>Overview:</strong> Strategic northern fulfillment center handling commercial poultry distribution throughout Penang, Kedah, and surrounding northern states.</p>
+                <p><strong>Direct Contact:</strong> <a href="tel:+60178389777">+60 17-838 9777</a> | Email: <a href="mailto:penang@osfpoultry.com">penang@osfpoultry.com</a></p>
+            </div>
+
+            <!-- Johor Pane -->
+            <div id="pane-johor" class="branch-detail-pane">
+                <h3>Johor Branch - Southern Hub</h3>
+                <p><strong>Location & Hub:</strong> Larkin / Tebrau Industrial Area, Johor Bahru</p>
+                <p><strong>Overview:</strong> Supporting southern local retail distribution, restaurant supply chains, and cross-region logistics operations.</p>
+                <p><strong>Direct Contact:</strong> <a href="tel:+60178389777">+60 17-838 9777</a> | Email: <a href="mailto:johor@osfpoultry.com">johor@osfpoultry.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Get in Touch with Sales</h2>
+        <div class="contact-box">
+            <p style="margin-bottom: 1.25rem; text-align: center; color: #475569;">For commercial pricing, bulk orders, or partnership inquiries, reach out directly to our management and sales team.</p>
+            <div class="contact-info">
+                <p><strong>Direct Call / Mobile:</strong> <a href="tel:+60178389777">+60 17-838 9777</a></p>
+                <p><strong>WhatsApp Sales:</strong> <a href="https://wa.me/60178389777?text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20OSF%20Poultry%20wholesale%20orders." target="_blank" style="color: #16a34a;">Chat on WhatsApp 💬</a></p>
+                <p><strong>Official Email:</strong> <a href="mailto:hq@osfpoultry.com">hq@osfpoultry.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 OSF Poultry Central Sdn Bhd. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showBranch(branchId) {
+            // Hide all panes
+            const panes = document.querySelectorAll('.branch-detail-pane');
+            panes.forEach(pane => pane.classList.remove('active'));
+
+            // Remove active class from all cards
+            const cards = document.querySelectorAll('.branch-card');
+            cards.forEach(card => card.classList.remove('active'));
+
+            // Show selected pane
+            document.getElementById('pane-' + branchId).classList.add('active');
+
+            // Highlight clicked card
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
