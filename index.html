@@ -17,12 +17,16 @@
         
         header { background: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
         .nav-container { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .logo-container { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .nav-logo { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 1px solid #cbd5e1; }
         .logo { font-size: 1.15rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        
         .nav-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; }
         .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
         .nav-links a:hover { color: var(--primary); }
 
         .hero { background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=1600&q=80') center/cover; color: white; padding: 5rem 1.5rem; text-align: center; }
+        .hero-logo { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 3px solid #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.3); margin: 0 auto 1.5rem auto; display: block; background: white; }
         .hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; font-weight: 800; line-height: 1.2; }
         .hero p { font-size: clamp(1rem, 2vw, 1.25rem); max-width: 700px; margin: 0 auto 2rem; opacity: 0.9; }
         .btn { display: inline-block; background: var(--accent); color: white; padding: 0.75rem 1.75rem; border-radius: 0.375rem; text-decoration: none; font-weight: 600; transition: background 0.2s; }
@@ -41,7 +45,6 @@
         .branch-card:hover { border-color: var(--primary); transform: translateY(-2px); }
         .branch-card.active { border-color: var(--primary); background: #f0f9ff; }
 
-        /* Branch Details Display Box */
         .branch-details-container { background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-left: 5px solid var(--primary); margin-top: 1rem; }
         .branch-detail-pane { display: none; }
         .branch-detail-pane.active { display: block; animation: fadeIn 0.3s ease; }
@@ -72,7 +75,10 @@
 
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">OSF Poultry Central Sdn Bhd</a>
+            <a href="#" class="logo-container">
+                <img src="logo.png" alt="OSF Poultry Logo" class="nav-logo">
+                <span class="logo">OSF Poultry Central Sdn Bhd</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
@@ -84,6 +90,7 @@
     </header>
 
     <section id="home" class="hero">
+        <img src="logo.png" alt="OSF Poultry Logo" class="hero-logo">
         <h1>High-Grade Frozen Chicken & Cold-Chain Logistics</h1>
         <p>Supplying premium, hygienic, Halal-certified poultry to wholesale partners, supermarkets, and food services across Malaysia.</p>
         <a href="#contact" class="btn">Request Wholesale Quote</a>
@@ -130,7 +137,7 @@
         <p style="text-align: center; margin-bottom: 2rem; color: #475569;">Click on any branch below to view its regional location details, operations overview, and contact info:</p>
         
         <div class="branch-grid">
-            <div class="branch-card active" onclick="showBranch('kl')">Kuala Lumpur <br><span style="font-size:0.85rem; font-weight:normal; color:#64748b;">Central Region</span></div>
+            <div class="branch-card active" onclick="showBranch('kl')">Kuala Lumpur HQ<br><span style="font-size:0.85rem; font-weight:normal; color:#64748b;">Central HQ & Hub</span></div>
             <div class="branch-card" onclick="showBranch('penang')">Penang Branch<br><span style="font-size:0.85rem; font-weight:normal; color:#64748b;">Northern Region</span></div>
             <div class="branch-card" onclick="showBranch('johor')">Johor Branch<br><span style="font-size:0.85rem; font-weight:normal; color:#64748b;">Southern Hub</span></div>
         </div>
@@ -138,10 +145,10 @@
         <div class="branch-details-container">
             <!-- KL HQ Pane -->
             <div id="pane-kl" class="branch-detail-pane active">
-                <h3>Kuala Lumpur - Central  Region</h3>
+                <h3>Kuala Lumpur (Headquarters)</h3>
                 <p><strong>Location & Hub:</strong> Kuala Lumpur (Main Corporate Headquarters & Central Region Hub)</p>
                 <p><strong>Overview:</strong> Manages primary corporate governance, nationwide supply chain logistics coordination, central processing quality control, and key enterprise accounts.</p>
-                <p><strong>Direct Contact:</strong> <a href="tel:+60178389777">+60 17-838 9777</a> | Email: <a href="mailto:kl@osfpoultry.com">kl@osfpoultry.com</a></p>
+                <p><strong>Direct Call / Mobile:</strong> <a href="tel:+60127641618">+60 12-764 1618</a> | Email: <a href="mailto:hq@osfpoultry.com">hq@osfpoultry.com</a></p>
             </div>
 
             <!-- Penang Pane -->
@@ -149,7 +156,7 @@
                 <h3>Penang Branch - Northern Region</h3>
                 <p><strong>Location & Hub:</strong> Prai / Penang Industrial Cold-Chain Terminal</p>
                 <p><strong>Overview:</strong> Strategic northern fulfillment center handling commercial poultry distribution throughout Penang, Kedah, and surrounding northern states.</p>
-                <p><strong>Direct Contact:</strong> <a href="tel:+60178389777">+60 17-838 9777</a> | Email: <a href="mailto:penang@osfpoultry.com">penang@osfpoultry.com</a></p>
+                <p><strong>Direct Call / Mobile:</strong> <a href="tel:+60127641618">+60 12-764 1618</a> | Email: <a href="mailto:penang@osfpoultry.com">penang@osfpoultry.com</a></p>
             </div>
 
             <!-- Johor Pane -->
@@ -157,7 +164,7 @@
                 <h3>Johor Branch - Southern Hub</h3>
                 <p><strong>Location & Hub:</strong> Larkin / Tebrau Industrial Area, Johor Bahru</p>
                 <p><strong>Overview:</strong> Supporting southern local retail distribution, restaurant supply chains, and cross-region logistics operations.</p>
-                <p><strong>Direct Contact:</strong> <a href="tel:+60178389777">+60 17-838 9777</a> | Email: <a href="mailto:johor@osfpoultry.com">johor@osfpoultry.com</a></p>
+                <p><strong>Direct Call / Mobile:</strong> <a href="tel:+60127641618">+60 12-764 1618</a> | Email: <a href="mailto:johor@osfpoultry.com">johor@osfpoultry.com</a></p>
             </div>
         </div>
     </section>
@@ -167,8 +174,8 @@
         <div class="contact-box">
             <p style="margin-bottom: 1.25rem; text-align: center; color: #475569;">For commercial pricing, bulk orders, or partnership inquiries, reach out directly to our management and sales team.</p>
             <div class="contact-info">
-                <p><strong>Direct Call / Mobile:</strong> <a href="tel:+60178389777">+60 17-838 9777</a></p>
-                <p><strong>WhatsApp Sales:</strong> <a href="https://wa.me/60178389777?text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20OSF%20Poultry%20wholesale%20orders." target="_blank" style="color: #16a34a;">Chat on WhatsApp 💬</a></p>
+                <p><strong>Direct Call / Mobile:</strong> <a href="tel:+60127641618">+60 12-764 1618</a></p>
+                <p><strong>WhatsApp Sales:</strong> <a href="https://wa.me/60127641618?text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20OSF%20Poultry%20wholesale%20orders." target="_blank" style="color: #16a34a;">Chat on WhatsApp 💬</a></p>
                 <p><strong>Official Email:</strong> <a href="mailto:hq@osfpoultry.com">hq@osfpoultry.com</a></p>
             </div>
         </div>
@@ -180,18 +187,13 @@
 
     <script>
         function showBranch(branchId) {
-            // Hide all panes
             const panes = document.querySelectorAll('.branch-detail-pane');
             panes.forEach(pane => pane.classList.remove('active'));
 
-            // Remove active class from all cards
             const cards = document.querySelectorAll('.branch-card');
             cards.forEach(card => card.classList.remove('active'));
 
-            // Show selected pane
             document.getElementById('pane-' + branchId).classList.add('active');
-
-            // Highlight clicked card
             event.currentTarget.classList.add('active');
         }
     </script>
